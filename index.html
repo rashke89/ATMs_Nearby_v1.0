@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ATMs Nearby v1.0</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- jumbotron div -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron">
+        <h1 class="text-center atm_h1">ATMs Nearby v1.0</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- wrap -->
+  <div class="container">
+
+    <!-- if user accept -->
+    <div id="wrap" class="row">
+      <div id="list" class="col-xs-12 col-md-5 col-md-offset-1">
+        <div class="page-header">
+          <h3 class="list_h3">List of nearby ATMs:</h3>
+        </div>
+      </div>
+
+      <!-- map -->
+      <div id="map" class="col-xs-12 col-md-5">
+      </div>
+    </div>
+
+    <!-- if user deny -->
+    <div class="wrapDeny text-center">
+      <h3 style="padding-top:25px;">You have denied geolocation!</h3>
+      <p>Sorry, we cannot provide you with a list of nearby ATMs.</p>
+      <p>Please, <span class="reload" onclick="reload()">reload the page</span> and accept geolocation.</p>
+    </div>
+  </div>
+
+
+  <script src="./js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false&libraries=geometry"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&callback=initMap&libraries=places" ></script>
+</body>
+
+</html>
